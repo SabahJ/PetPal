@@ -2,9 +2,17 @@
 
 namespace PetPal.Web.Extensions;
 
+/// <summary>
+/// PetPal Swagger Extensions
+/// </summary>
 public static class SwaggerGenExtension
 {
-    public static IServiceCollection AddSwagger(this IServiceCollection serviceCollection)
+    /// <summary>
+    /// Customize Add Swagger Gen for PetPal
+    /// </summary>
+    /// <param name="serviceCollection"></param>
+    /// <returns></returns>
+    public static IServiceCollection AddPetPalSwagger(this IServiceCollection serviceCollection)
     {
         var descriptionProvider = serviceCollection.BuildServiceProvider().GetRequiredService<IApiVersionDescriptionProvider>();
         
@@ -28,7 +36,12 @@ public static class SwaggerGenExtension
         });
     }
 
-    public static IApplicationBuilder CustomizeUseSwaggerUi(this WebApplication applicationBuilder)
+    /// <summary>
+    /// Customize Use Swagger for PetPal
+    /// </summary>
+    /// <param name="applicationBuilder"></param>
+    /// <returns></returns>
+    public static IApplicationBuilder UsePetPalSwaggerUi(this WebApplication applicationBuilder)
     {
         var descriptions = applicationBuilder.DescribeApiVersions();
         

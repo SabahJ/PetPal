@@ -2,8 +2,16 @@
 
 namespace PetPal.Web.Extensions;
 
+/// <summary>
+/// PetPal Versioning Extensions
+/// </summary>
 public static class VersioningExtensions
 {
+    /// <summary>
+    /// Customize Add API Versioning for PetPal
+    /// </summary>
+    /// <param name="serviceCollection"></param>
+    /// <returns></returns>
     public static IApiVersioningBuilder AddPetPalApiVersioning(this IServiceCollection serviceCollection)
     {
         

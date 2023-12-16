@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 // Support Versioning 
 builder.Services.AddPetPalApiVersioning();
 
-builder.Services.AddSwagger();
+builder.Services.AddPetPalSwagger();
 
 var app = builder.Build();
 
@@ -17,7 +17,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.CustomizeUseSwaggerUi();
+    app.UsePetPalSwaggerUi();
 }
 
 app.UseHttpsRedirection();
