@@ -1,9 +1,20 @@
-﻿namespace PetPal.Web;
+using PetPal.Web.Extensions;
 
-class Program
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwagger();
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
 {
-    static void Main(string[] args)
-    {
-        Console.WriteLine("Hello, World!");
-    }
+    app.UseSwagger();
+    app.CustomizeUseSwaggerUi();
 }
+
+app.UseHttpsRedirection();
+
+app.Run();
