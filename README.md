@@ -1,0 +1,1 @@
+PetPal Shelter is an online platform designed to connect homeless pets with loving families. Our mission is to facilitate the adoption process, making it easier for potential pet parents to find their perfect furry companions. The platform serves as a bridge between shelters, rescue organizations, and individuals looking to adopt pets
