@@ -21,6 +21,9 @@ public static class SwaggerGenExtension
                                     to find their perfect furry companions. The platform serves as a bridge between shelters,
                                     rescue organizations, and individuals looking to adopt pets"
                 });
+                
+                var filePath = Path.Combine(System.AppContext.BaseDirectory, "PetPal.Web.xml");
+                option.IncludeXmlComments(filePath);
             }
         });
     }
