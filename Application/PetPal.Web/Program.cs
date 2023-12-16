@@ -4,6 +4,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddControllers();
+
+// Support Versioning 
+builder.Services.AddPetPalApiVersioning();
+
 builder.Services.AddSwagger();
 
 var app = builder.Build();
@@ -16,5 +21,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.MapControllers();
 
 app.Run();
